@@ -1,0 +1,11 @@
+#Bài 2: Nhập matran 4x3 dưới dạng tuple
+print('Nhập ma trận 4x3: ')
+matran = []
+for i in range(4):
+    print(f'Nhập dòng {i+1}: ', end= '')
+    dong = tuple(int(x) for x in input().split())
+    matran.append(dong)
+matran_tuple = tuple(matran)
+print('\nMa trận 4x3 (dạng tuple): ')
+for dong in matran_tuple:
+    print(dong)
