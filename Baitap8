@@ -1,0 +1,19 @@
+#Bài 8: Nhập 1 dãy số nguyên gồm n phàn tử. Ghi dỹ số vừa nhập vào file "dulieu.txt" ở ổ đĩa C
+# Nhập dãy số
+n = int(input("Nhập số lượng phần tử n: "))
+day_so = []
+for i in range(n):
+    so = int(input(f"Nhập phần tử thứ {i+1}: "))
+    day_so.append(so)
+try:
+    with open("C:/dulieu.txt", "w", encoding="utf-8") as file:
+        # Ghi các số cách nhau bởi dấu cách
+        for so in day_so:
+            file.write(f"{so} ")
+    print("Đã ghi dữ liệu vào C:/dulieu.txt")
+except PermissionError:
+    print("Không có quyền ghi vào ổ C. Hãy chạy với quyền Administrator")
+    with open("dulieu.txt", "w", encoding="utf-8") as file:
+        for so in day_so:
+            file.write(f"{so} ")
+    print("Đã ghi vào file dulieu.txt ở thư mục hiện tại")
