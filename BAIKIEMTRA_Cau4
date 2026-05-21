@@ -1,0 +1,9 @@
+m = int(input('Nhập số nguyên dương m: '))
+n = int(input('Nhập số nguyên dương n: '))
+if m <= 0 or n <= 0:
+    print('m và n phải là số nguyên dương')
+else:
+    tong = m + n 
+    chu_so_lon_nhat = max(int(ch) for ch in str (tong))
+    print(f'Tổng m + n = {tong}')
+    print(f'Chữ số lớn nhất trong tổng là: {chu_so_lon_nhat}')
