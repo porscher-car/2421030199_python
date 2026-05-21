@@ -1,0 +1,14 @@
+#Bài 3: Nhập 3 số nguyên, tìm số max,min trong 3 số đó
+a = int(input('Nhập số thứ nhất a: '))
+b = int(input('Nhập số thứ hai b: '))
+c = int(input('Nhập số thứ ba c: '))
+so_max = max(a, b, c)
+so_min = min(a, b, c)
+if a >= b and a >= c:
+    so_max = a 
+elif b >= a and b >= c:
+    so_max = b
+else:
+    so_max = c
+print(f'Số lớn nhất là: {so_max}')
+print(f'Số nhỏ nhất là: {so_min}')
