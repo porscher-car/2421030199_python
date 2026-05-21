@@ -1,0 +1,15 @@
+#Bài 6: Nhập 3 điểm toán, lý, hóa. Tính điểm trung bình và xếp loại: với <5: yếu, 5-6.5: trung bình, 6.5-8: khá, >8: giỏi
+toan = float(input("Nhập điểm Toán: "))
+ly = float(input("Nhập điểm Lý: "))
+hoa = float(input("Nhập điểm Hóa: "))
+dtb = (toan + ly + hoa) / 3
+if dtb < 5:
+    xep_loai = "Yếu"
+elif 5 <= dtb < 6.5:
+    xep_loai = "Trung bình"
+elif 6.5 <= dtb < 8:
+    xep_loai = "Khá"
+else:
+    xep_loai = "Giỏi"
+print(f"Điểm trung bình: {dtb:.2f}")
+print(f"Xếp loại: {xep_loai}")
