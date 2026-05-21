@@ -1,0 +1,15 @@
+#Bài 5: Nhập mã dân tộc và hiển thị
+Ma = input('Nhập mã dân tộc (1-5): ')
+if Ma == '1':
+    ten_dan_toc = 'Kinh'
+elif Ma == '2':
+    ten_dan_toc = 'Tày'
+elif Ma == '3':
+    ten_dan_toc = 'Thái'
+elif Ma == '4':
+    ten_dan_toc = 'Mường'
+elif Ma == '5':
+    ten_dan_toc = 'Khác'
+else:
+    ten_dan_toc = 'Mã không hợp lệ'
+print(f'Dân tộc: {ten_dan_toc}')
