@@ -1,0 +1,22 @@
+#Bài 9: Nhập vào 1 ma trận có m hàng và n cột. Ghi ma trận vừa nhập vào file "matran.txt" ở ổ đĩa C
+m = int(input("Nhập số hàng m: "))
+n = int(input("Nhập số cột n: "))
+ma_tran = []
+print("Nhập các phần tử của ma trận:")
+for i in range(m):
+    hang = []
+    for j in range(n):
+        gia_tri = int(input(f"Nhập phần tử [{i+1}][{j+1}]: "))
+        hang.append(gia_tri)
+    ma_tran.append(hang)
+try:
+    with open("C:/matran.txt", "w", encoding="utf-8") as file:
+        for hang in ma_tran:
+            file.write(" ".join(map(str, hang)) + "\n")
+    print("Đã ghi ma trận vào C:/matran.txt")
+except PermissionError:
+    print("Không có quyền ghi vào ổ C. Đang ghi vào thư mục hiện tại...")
+    with open("matran.txt", "w", encoding="utf-8") as file:
+        for hang in ma_tran:
+            file.write(" ".join(map(str, hang)) + "\n")
+    print("Đã ghi vào file matran.txt ở thư mục hiện tại")
