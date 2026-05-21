@@ -1,0 +1,21 @@
+#Bài 7: Viết chương trình đọc tệp input.txt gồm n dòng, mỗi dòng là 1 số tự nhiên. kết quả chương trình là output gồm n dòng lần lượt là các ước số nguyên tố khác nhau
+def kiem_tra_nguyen_to(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+def uoc_nguyen_to(n):
+    uoc_nt = []
+    for i in range(2, n + 1):
+        if n % i == 0 and kiem_tra_nguyen_to(i):
+            uoc_nt.append(i)
+    return uoc_nt
+with open("input.txt", "r", encoding="utf-8") as file_in:
+    cac_so = [int(dong.strip()) for dong in file_in if dong.strip()]
+with open("output.txt", "w", encoding="utf-8") as file_out:
+    for so in cac_so:
+        ket_qua = uoc_nguyen_to(so)
+        file_out.write(f"{ket_qua}\n")
+print("Đã xử lý xong! Kiểm tra file output.txt")
