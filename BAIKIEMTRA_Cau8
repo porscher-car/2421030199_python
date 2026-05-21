@@ -1,0 +1,15 @@
+x = int(input("Nhập số nguyên dương x : "))
+y = int(input("Nhập số nguyên dương y : "))
+z = int(input("Nhập số nguyên dương z : "))
+tich = x * y * z 
+print(f"Tich {x} * {y} * {z} = {tich}")
+so_chu_so = len(str(tich))
+print(f"Tích có {so_chu_so} chứ số")
+chu_so_lon_nhat = 0 
+temp = tich
+while temp > 0:
+    chu_so = temp % 10 
+    if chu_so > chu_so_lon_nhat:
+        chu_so_lon_nhat = chu_so
+    temp //= 10
+print(f"Chữ số lớn nhất trong tích là: {chu_so_lon_nhat}") 
