@@ -1,0 +1,6 @@
+#Bài 4: Nhập 1 số nguyên, kiểm tra xem số đó là chẵn hay lẻ
+n = int(input('Nhập một số nguyên: '))
+if n % 2 == 0:
+    print(f'{n} là số chẵn')
+else:
+    print(f'{n} là số lẻ')
