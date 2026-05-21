@@ -1,0 +1,6 @@
+#Bài 1: Nhập vào 1 chuỗi số cách nhau bởi " ", chuyển chúng thành list số nguyên và tính tổng. In ra ma trận 1 chiều của chuỗi số đó
+chuoi_so = input('Nhập các số cách nhah bởi dấu cách: ')
+list_so = [int(x) for x in chuoi_so.split()]
+tong = sum(list_so)
+print('Ma trận 1 chiều: ', list_so)
+print('Tổng các số: ', tong)
